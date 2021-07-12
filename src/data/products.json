@@ -5,7 +5,7 @@
     "price": 44,
     "description": "The best soccer ball ever!",
     "imageUrl": "images/soccerball.jpg",
-    "category": "soccer"
+    "category": "Soccer"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "price": 624,
     "description": "Have some extreme fun being pulled in this raft!",
     "imageUrl": "images/tubingraft.jpg",
-    "category": "watersports"
+    "category": "Water Sports"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "price": 499,
     "description": "finest wood",
     "imageUrl": "images/chessboard.jpg",
-    "category": "boardgames"
+    "category": "Board Games"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "price": 591,
     "description": "Display your national pride with this authentic Team Canada soccer jersey!",
     "imageUrl": "images/soccerjersey.jpg",
-    "category": "soccer"
+    "category": "Soccer"
   },
   {
     "id": 5,
@@ -37,6 +37,6 @@
     "price": 396,
     "description": "Top-of-the-line goggles for the most extreme of watersports!",
     "imageUrl": "images/goggles.jpg",
-    "category": "watersports"
+    "category": "Water Sports"
   }
 ]

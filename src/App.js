@@ -1,5 +1,5 @@
-import Header from "./components/Header.js"
-import ProductCategories from "./components/ProductCategories.js"
+import Header from "./components/classComponents/Header.js"
+import ProductCategories from "./components/classComponents/ProductCategories.js"
 import ProductsList from "./components/ProductsList.js"
 import Footer from "./components/Footer.js"
 

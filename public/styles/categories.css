@@ -29,3 +29,7 @@
 .categories a:hover {
     font-weight: bold;
 }
+
+.categories .selected-category {
+    background-color: var(--warning-button);
+}
