@@ -1,4 +1,6 @@
 import React from "react";
+
+import SignupPage from "../../pages/SignupPage.js"
 import Header from "./Header.js";
 import ProductCategories from "./ProductCategories.js";
 import ProductsList from "../ProductsList.js";
@@ -11,7 +13,12 @@ function getButtonText() {
 
 class App extends React.Component {
   state = {
+    currentPage: "products",
     selectedCategories: [],
+  };
+
+  handleNavigation = (event) => {
+    this.setState({ currentPage: event.target.id });
   };
 
   handleSelectCategory = (event) => {
@@ -27,24 +34,36 @@ class App extends React.Component {
   this.setState({ selectedCategories });
   };
 
+  handleSubmit = (formValues) => {
+    console.log("form submitted");
+    this.setState({ currentPage: "products" });
+  };
 
 render () {
     return (
-    <div className="container">
-      <Header buttonText={getButtonText()} />
-      <ProductCategories
-       selectedCategories={this.state.selectedCategories}
-       handleSelectCategory={this.handleSelectCategory}
-      />
-      <ProductsList
-      products={products.filter(
-        (product) =>
-        this.state.selectedCategories.includes(product.category) ||
-        !this.state.selectedCategories.length
+      <div className="container">
+        <Header
+        buttonText={getButtonText()}
+        handleNavigation={this.handleNavigation}
+        />
+        {this.state.currentPage === 'products' ? (
+          <>
+            <ProductCategories
+            selectedCategories={this.state.selectedCategories}
+            handleSelectCategory={this.handleSelectCategory}
+            />
+            <ProductsList
+            products={products.filter(
+              (product) =>
+              this.state.selectedCategories.includes(product.category) ||
+              !this.state.selectedCategories.length
+              )}
+            />
+          </>
+        )  : ( <SignupPage handleSubmit={this.handleSubmit} />
         )}
-      />
-      <Footer />
-    </div>
+        <Footer />
+      </div>
     );
   }
 }
